@@ -1,18 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
+gem 'pg', '0.12.2'
 
 group :development, :test do
-	# gem 'sqlite3', '1.3.5'
 	gem 'rspec-rails', '2.14.0'
 	gem 'guard-rspec'
+	gem 'guard-spork'
 end
 
 group :test do
 	gem 'capybara', '2.1.0'
 end
-
-gem 'pg', '0.12.2'
 
 # Gems used only for assets and not required
 # in production environments by default.
