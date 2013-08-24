@@ -8,10 +8,15 @@ describe "Static pages" do
       page.should have_content('Sample App')
     end
 
-    it "should have title Rails Tutorial Demo | Home" do
+    it "should have base_title Rails Tutorial Demo" do
       visit '/static_pages/home'
-      page.should have_title("#{base_title} | Home")
+      page.should have_title("#{base_title}")
     end
+
+    it "should not have page title | Home" do
+      visit '/static_pages/home'
+      page.should_not have_title(" | Home")
+    end    
   end
   describe "Help page" do
     it "should have the content 'Help'" do
